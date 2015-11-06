@@ -29,6 +29,9 @@ ifneq ($(filter msm8994,$(TARGET_BOARD_PLATFORM)),)
   LOCAL_CFLAGS += -DKPI_OPTIMIZE_ENABLED
 endif
 endif
+ifneq ($(filter msm8960,$(TARGET_BOARD_PLATFORM)),)
+  LOCAL_CFLAGS += -DMAX_TARGET_SPECIFIC_CHANNEL_CNT="2"
+endif
 
 LOCAL_SRC_FILES := \
 	audio_hw.c \
